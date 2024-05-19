@@ -1,0 +1,11 @@
+<section class="section">
+	<div class="section__cards">
+		<app-card-md
+			*ngFor="let card of cards"
+			[label]="card.label"
+			[route]="card.route"
+			[source]="card.source"
+		>
+		</app-card-md>
+	</div>
+</section>

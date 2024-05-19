@@ -1,0 +1,12 @@
+<a [routerLink]="route" class="card-sm">
+  <span class="card-sm__container">
+    <img [src]="source" alt="{{ label }}" />
+    <div *ngIf="!hideConsoles" class="card-sm__console">
+      <span *ngFor="let console of consoles">{{ console }}</span>
+    </div>
+  </span>
+  <p class="card-sm__title">{{ label }}</p>
+  <p class="card-sm__value" *ngIf="!hideValue">
+    {{ displayValue }}
+  </p>
+</a>

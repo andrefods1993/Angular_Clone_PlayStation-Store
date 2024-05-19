@@ -1,0 +1,32 @@
+<div class="carousel">
+	<button
+		class="carousel__button carousel__button--left"
+		(click)="prevPage()"
+		[disabled]="currentIndex === 0"
+		*ngIf="shouldShowPrevButton()"
+	>
+		<img [src]="'../../../assets/images/chevron-left.svg'" />
+	</button>
+	<div class="carousel__container">
+		<app-card-sm
+			*ngFor="
+				let card of cards.slice(currentIndex, currentIndex + itemsPerPage)
+			"
+			[label]="card.label"
+			[route]="card.route"
+			[source]="card.source"
+			[consoles]="card.consoles"
+			[value]="card.value"
+			[hideConsoles]="false"
+			[hideValue]="false"
+		>
+		</app-card-sm>
+	</div>
+	<button
+		class="carousel__button carousel__button--right"
+		(click)="nextPage()"
+		[disabled]="currentIndex + itemsPerPage >= cards.length"
+	>
+		<img [src]="'../../../assets/images/chevron-right.svg'" />
+	</button>
+</div>

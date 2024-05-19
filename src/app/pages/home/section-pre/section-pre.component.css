@@ -1,0 +1,33 @@
+.section {
+	margin: 4rem 0;
+	padding: 0 1rem;
+}
+
+.section__cards {
+	display: flex;
+	flex-direction: column;
+}
+
+app-card-best-carousel {
+	padding: 1rem 0;
+}
+
+.section__cards h1 {
+	font-size: 20px;
+	font-weight: 300;
+	color: var(--text-title-color);
+	padding-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+	.section__cards h1 {
+		font-size: 28px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.section__cards {
+		max-width: 1200px;
+		margin: auto;
+	}
+}

@@ -1,0 +1,45 @@
+ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+	gap: 5px;
+}
+
+a {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--t-menu-color);
+	padding: 4px 10px;
+	border: 2px solid var(--bd-none);
+	border-radius: 24px;
+	background-color: var(--bg-menu-color);
+	cursor: pointer;
+	transition: background-color 0.25s ease-in;
+}
+
+.active {
+	background-color: var(--active-bg-menu-color);
+}
+
+a:hover {
+	background-color: var(--hover-bg-menu-color);
+}
+
+a:focus {
+	background-color: var(--focus-bg-menu-color);
+	border-color: var(--bd-focus);
+}
+
+a:active {
+	background-color: var(--active-bg-menu-color);
+	border-color: var(--bd-active);
+}
+
+@media (min-width: 768px) {
+	a {
+		font-size: 1.1rem;
+		padding: 4px 12px;
+		border-radius: 32px;
+	}
+}

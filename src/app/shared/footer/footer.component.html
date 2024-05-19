@@ -1,0 +1,19 @@
+<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__logo">
+			<img src="../../../assets/images/psn-logo.png" alt="PSN Logo" />
+		</div>
+		<div class="footer__menu">
+			<ul *ngFor="let item of menuItems">
+				<li>
+					<a [href]="item.route" target="_blank">
+						{{ item.label }}
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__copy">
+			<p>© 2024 André Filipe Todos os direitos reservados.</p>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,18 @@
+.section {
+	margin: 4rem 0;
+	padding: 0 1rem;
+}
+
+.section__cards {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+	.section__cards {
+		max-width: 1200px;
+		margin: auto;
+	}
+}
